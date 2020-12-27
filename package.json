@@ -8,17 +8,16 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prettier": "npx prettier --write src/**/*.ts"
+    "prettier": "npx prettier --write ."
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --relative"
     }
   },
   "lint-staged": {
-    "*.(ts|html)": [
-      "npm run prettier",
-      "git add"
+    "*.{js,ts}": [
+      "npx eslint --fix"
     ]
   },
   "private": true,
@@ -39,11 +38,25 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.5",
+    "@angular-eslint/builder": "0.8.0-beta.7",
+    "@angular-eslint/eslint-plugin": "0.8.0-beta.7",
+    "@angular-eslint/eslint-plugin-template": "0.8.0-beta.7",
+    "@angular-eslint/schematics": "^0.8.0-beta.7",
+    "@angular-eslint/template-parser": "0.8.0-beta.7",
     "@angular/cli": "~11.0.5",
     "@angular/compiler-cli": "~11.0.5",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "30.7.6",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "^3.3.0",
     "husky": "^4.3.6",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
