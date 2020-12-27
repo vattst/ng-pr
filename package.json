@@ -18,7 +18,6 @@
   "lint-staged": {
     "*.(ts|html)": [
       "npm run prettier",
-      "npm run lint",
       "git add"
     ]
   },
