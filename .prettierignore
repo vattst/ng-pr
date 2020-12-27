@@ -45,5 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Other files/folders:
-package-lock.json
+# Other files/folders
+**/test.ts
