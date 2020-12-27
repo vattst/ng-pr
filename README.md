@@ -3,6 +3,9 @@
 
 ## Techs:
 - Angular
+- Prettier
+- Husky
+- Lint-staged
 
 ## Commands:
 
